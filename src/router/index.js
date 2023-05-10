@@ -12,7 +12,7 @@ export default new VueRouter({
 		},
 		{
 			path: '/home',
-			component: () => import('../views/Main.vue'),
+			component: () => import('@/views/Main.vue'),
 		},
 	],
 });

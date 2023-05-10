@@ -1,5 +1,5 @@
 <template>
-	<div></div>
+	<div>하잉</div>
 </template>
 
 <script>

@@ -9,6 +9,10 @@ const $HISTORY_STACK = $HISTORY.historyStack;
 const routes = [
 	{
 		path: '/',
+		redirect: '/home',
+	},
+	{
+		path: '/',
 		name: 'MainIndex',
 		component: createComponentIndex(
 			() => import('@/layouts/BaseHeader.vue'),
@@ -24,14 +28,6 @@ const routes = [
 			},
 		],
 	},
-	{
-		path: '/',
-		redirect: '/home',
-	},
-	{
-		path: '/home',
-		component: () => import('@/views/Main.vue'),
-	},
 ];
 
 const router = new VueRouter({
@@ -40,11 +36,12 @@ const router = new VueRouter({
 	routes,
 });
 
-router.beforeEach((to, from) => {
+router.beforeEach((to, from, next) => {
 	let historyObj = {};
 	historyObj.name = from.name;
 	historyObj.params = from.params;
 	$HISTORY_STACK.push(historyObj);
+	next();
 	window.scrollTo(0, 0);
 });
 

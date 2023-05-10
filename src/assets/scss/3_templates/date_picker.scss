@@ -1,0 +1,101 @@
+// 날짜 선택 관련
+.datepicker{
+  .v-btn-toggle{
+    width:100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(20%, auto));
+    .v-btn{
+      margin-right: 2px;
+      border:none !important;
+      opacity: 1 !important;
+      height: 40px !important;
+      background: #f5f5f5 !important;
+
+      .v-btn__content{
+        color: #707070 !important;
+      }
+    }
+    .v-btn:last-child{
+      margin-right: 0;
+    }
+    .v-btn--active{
+      background:#FD7B54 !important;
+      .v-btn__content{
+        color: #fff !important;
+        z-index: 1;
+      }
+    }
+    .v-btn--active::before{
+      display: none !important;
+    }
+  }
+
+  .v-icon{
+    color: #B7BEC6 !important;
+  }
+  .v-input__control{
+    .v-input__slot{border:1px solid #B7BEC6;}
+    .v-input__slot:before{display:none;}
+  }
+}
+
+// date time picker
+
+//date picker 공통
+.v-picker.v-picker--date{
+  .v-picker__body{margin-bottom: 5px;}
+  .v-date-picker-title__year{
+    font-size: 20px;
+  }
+  .v-date-picker-header{
+    .v-date-picker-header__value{
+      font-size: 16px;
+    }
+  }
+  .v-date-picker-table{
+    thead{
+      th{font-size: 14px;}
+    }
+    td{
+      button{
+        width: 38px;
+        height: 38px;
+        .v-btn__content{
+          font-size: 15px; font-weight: 600;
+        }
+      }
+    }
+  }
+  .v-date-picker-years{
+    height: 230px;
+    margin: 29px 20px;
+    border:2px solid #eee;
+    border-radius: 10px;
+    li{font-weight: 600; border-bottom: 1px solid #eee;}
+  }
+
+}
+
+// date,time picker
+.dateTimePicker{
+  position: relative; 
+  min-width:290px;
+  background: #fff;
+    .btn-close{position:absolute; top: 5px; right: 0; z-index: 1; width: 64px;}
+    .timePickerWrap{
+      .timePicker{
+        width: auto;
+        height: 120px;
+        margin: 0 20px;
+        padding: 0;
+        border: 2px solid #eee;
+        border-radius: 10px;
+        box-sizing: border-box;
+          .v-list-item{
+            font-size: 20px;
+            font-weight: 700;
+            border-bottom: 1px solid #eee;
+          }
+      }
+    }
+}

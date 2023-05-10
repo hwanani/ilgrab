@@ -1,5 +1,5 @@
 <template>
-	<v-container> 메인페이지 </v-container>
+	<div>메인페이지</div>
 </template>
 <script>
 	export default {

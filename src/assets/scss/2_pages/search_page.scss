@@ -1,0 +1,85 @@
+
+.v-card__title.center{
+  h3{
+     margin: 0 auto;
+  }
+}
+
+.select-wrap{
+  .v-input__slot{
+    padding: 0 !important;
+    .v-label{font-size: 14px !important; margin-top:-2px;}
+    .v-input__append-inner{padding-left: 0 !important;}
+    .v-select__selection--comma{
+      margin-top:1px !important;
+    }
+  }
+}
+
+.v-item-group.tabs{
+  display: flex !important;
+  width: 100%;
+  border-bottom:1px solid #eee;
+  .v-btn{
+    flex: auto;
+    border:none !important;
+    color: #000 !important;
+    font-weight: 900;
+    font-size: 15px;
+  }
+  .v-btn--active{color: #FF7B54 !important;}
+  .v-btn--active:before{
+    opacity: 1 !important;
+    width: 100%;
+    height: 2px;
+    top: auto;
+    bottom: 0;
+    transition: none !important;
+  }
+  .v-btn:before{
+    transition: none !important;
+  }
+}
+
+//가격대 탭 창
+.price-chips{
+  .v-chip{
+  }
+  .v-chip.active{
+    background-color: #FF7B54 !important;
+    background: #FF7B54 !important;
+    color: #fff !important;
+  }
+}
+
+
+//검색 결과 창
+
+.prd-result-table{
+  .v-item-group{
+    width: 100%;
+    .prd-item{
+      width: 50% !important; float: left;
+    }
+  }
+}
+
+.v-item-group{
+  .prd-item{
+    width: 50%;
+    padding: 7px;
+    float: left;
+    .prd-name{
+      white-space: normal;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      font-weight: 600;
+    }
+  }
+}
+.v-list-item--active::before{
+  opacity: 0 !important;
+}
+

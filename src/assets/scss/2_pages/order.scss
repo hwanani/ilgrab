@@ -1,0 +1,203 @@
+
+
+.v-btn-toggle{
+  width:100%;
+  display: grid !important;
+  grid-template-columns: repeat(auto-fill, minmax(25%, auto));
+  .v-btn{background-color: #fff !important; border:none !important; border-right:1px solid #f5f6f8 !important;}
+  .v-btn:last-child{border:none !important;}
+}
+.v-btn-toggle.grid2{
+  grid-template-columns: repeat(auto-fit, minmax(40%, auto));
+  border-bottom: none !important;
+}
+.v-btn-toggle.grid4{
+  grid-template-columns: repeat(auto-fill, minmax(25%, auto));
+}
+// 발신번호 선택 테이블
+.numselect-table{
+  tr{
+    td:first-child{
+      max-width: 10vw;
+      width: 60%;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+  td{white-space: nowrap;}
+}
+
+
+// 미리보기 모바일 프레임
+.mobile-frame-wrap{
+  position: relative;
+  width: 100%;
+  .mobile-frame{
+    position:relative;
+    width: 300px;
+    height: 600px;
+    margin: 0 auto;
+    border:16px solid #2e2e2e;
+    border-color:#2e2e2e !important;
+    border-radius: 37px !important;
+    overflow: hidden;
+
+    .mobile-cont{
+      background: transparent;
+      top: 0;
+      left: 0;
+      height: 600px;
+      overflow-y: scroll;
+      .v-data-table{
+        background: transparent;
+        tr{
+          th,td{
+            word-break: break-all;
+            border:none !important;
+          }
+          th{min-width: 90px;}
+        }
+      }
+    }
+  }
+  .mobile-frame:before{
+    position: absolute;
+    display: block;
+    content: '━';
+    font-size: 40px;
+    line-height: 8px;
+    color: #454545;
+    left: 50%;
+    width: 130px;
+    height: 20px;
+    transform: translateX(-50%);
+    background-color: #2e2e2e;
+    border-radius: 0 0 20vw 20vw;
+    text-align: center;
+    z-index: 2;
+  }
+}
+
+// 주문발급 조회
+.order-history{
+  .search-form{
+    .v-input__slot{
+      background: #f5f5f5 !important;
+      padding: 0 10px 0 12px !important;
+      .v-icon{
+        color: #000;
+      }
+      .v-text-field__slot{
+        label{
+          font-size: 13px;
+        }
+        input{
+          color:#ABABAB !important;
+        }
+      }
+    }
+  }
+
+
+
+  .order-data-table{
+    border-radius: 0 !important;
+    table{
+      padding: 10px 15px !important;
+      th,td{padding:0 !important; border-bottom:0 !important;}
+      td{text-align: right !important; white-space: nowrap;
+        overflow: hidden;max-width: 55vw;
+        text-overflow: ellipsis;}
+    }
+  }
+  .order-data-table>div:not(.v-card){
+    text-align: center;
+    color:#888;
+    padding: 30px 0;
+  }
+}
+
+// 주문발급 상세
+
+  .prd-wrap{
+    .prd-detail{
+      .img{
+        display:block;
+        float : left;
+        border:1px solid #f5f5f5;
+        overflow:hidden;
+        max-width:120px;
+        max-height: 120px;
+        border-radius: 7px;
+      }
+      .prd-info{
+        box-shadow: none !important;
+        display: block;
+        margin-left:130px;
+        span{display: block;}
+        .brand{color:#97989A;}
+        .prd-name{font-size: 16px; letter-spacing: -.8px;}
+        .expire{color: #97989A;}
+      }
+    }
+  }
+  .prd-table {
+    th,td{border-color: #f5f5f5 !important; letter-spacing: -.7px; padding: 12px 3px !important;}
+    th{width:120px; font-size:14px!important; color:#242424;}
+    td{font-size: 14px !important; color: #242424;}
+  }
+  .point{color:#FD7B54;}
+
+
+.info-table{
+  th,td{border:none !important; font-size: 14px !important;}
+  td{
+    text-align: right !important;
+    color:#97989A;
+    font-size: 14px;
+  }
+}
+.info-table.ver-02{
+  th,td{ border-bottom:1px solid #f5f6f8 !important; font-size: 16px !important;}
+  td{
+    text-align: right !important;
+    color:#97989A;
+    font-size: 14px;
+  }
+  tr:last-child{
+    th,td{border-bottom: 0 !important;}
+  }
+  .xl-txt{font-size: 18px !important;}
+  .xxl-txt{font-size: 24px !important;}
+}
+
+.info-table-border{
+  th,td{border-bottom:1px solid #f5f6f8 !important; font-size: 14px !important;}
+  td{
+    text-align: right !important;
+    color:#97989A;
+    font-size: 14px;
+  }
+}
+//구매약정서
+.buy-agreement{
+  border-radius:10px;
+}
+
+// 결제수단 관련
+.cash-list{width: 100%; border-collapse:collapse; border-radius: 7px; overflow: hidden; background: #ffefeb;
+  tbody{ 
+  tr{border-radius: 7px;}
+  }
+  tr{ height: 42px;}
+  th{text-align:left; padding: 10px;}
+  td{text-align:right; padding: 10px;}
+  tr:last-of-type{border: none;}
+}
+.cash-list.no-bg{background: #fff;}
+.cash-list.light{background: #fffee8;}
+.cash-list.border{border: 7px solid #ffefeb;}
+.cash-data-table{
+  td{text-align: right;}
+}

@@ -1,0 +1,310 @@
+
+.search-dialog{
+  max-width: 720px !important;
+  margin: 0 !important;
+  border-radius: 0 !important;
+  position: fixed;
+  bottom: 0;
+  box-shadow: none !important;
+  .v-btn.user-id{
+    width: initial !important;
+  }
+
+  .main-search-dialog{
+    position: relative;
+    max-width: 720px;
+    width: 100%;
+    overflow: hidden;
+    header{
+      height: auto !important;
+      max-width: 720px;
+      background-color: #FD7B54 !important;
+      .v-toolbar__content{
+        .v-btn{
+          min-width: 40px !important;
+          .v-icon{
+            font-size: 28px;
+          }
+        }
+        .v-toolbar__title{
+          font-weight: 500 !important;
+          a{color:#fff !important; font-weight: 700 !important; text-decoration: underline;}
+        }
+      }
+      .v-toolbar__extension{
+        margin:10px 0;
+        padding:0 22px !important;
+        height: auto !important;
+        .v-input__slot{
+          padding: 0 16px !important;
+        }
+        .hashtag-list{
+          li{
+            a{display: block; float: left; padding: 3px 7px; color:#fff; text-decoration: none;}
+          }
+        }
+        .hashtag-list::after{display:block; content: ''; clear:both;}
+      }
+    }
+
+
+    .v-tabs.classify-tab{
+      max-width: 720px;
+      background-color: #fafafa;
+
+      // 상단 탭
+      .v-tabs-bar{
+        background-color: transparent;
+      }
+      .v-tabs-slider{
+        color: #FD7B54 !important;
+        caret-color: #FD7B54 !important;
+        height: 3px !important;
+      }
+
+      .v-tab{
+        font-size: 14px !important;
+        color: black !important;
+      }
+      .v-tab:not(.v-tab--active){
+        .v-icon{
+          color: #000;
+        }
+      }
+
+      .v-tab.v-tab--active{
+        color: #FF7B54 !important;
+      }
+      .v-tab.v-tab--active{
+        .v-icon::before{
+          content: '\F0143' !important;
+          color: #FF7B54 !important;
+        }
+      }
+
+
+      // 하단 메뉴 노출
+      .tab-cont{
+        height: 164px;
+        .v-list{
+          height: fit-content;
+          max-height: 200px;
+        }
+      }
+      .category{
+        .v-list{
+          overflow-y: scroll;
+          .v-list-item{
+            border-bottom:1px solid #f5f6f8;
+            box-sizing: border-box;
+            .v-list-item__title{
+              font-size: 14px !important;
+            }
+          }
+          .v-list-item--active::before{
+            display: none;
+          }
+          .v-list-item--hover::before{
+            display: none;
+          }
+        }
+      }
+      //브랜드 탭
+      .brand{
+        .v-list{
+          width: 100%;
+          padding-bottom: 50px;
+          overflow-y: scroll;
+          .v-list-item-group{
+            display: flex;
+            flex-wrap: wrap;
+          .v-list-item{
+            flex:initial;
+            margin:0px;
+            padding:0 5px;
+            width: calc((100vw - 40px)/5);
+            float: left;
+            .v-list-item__content{
+
+              .img{
+                display: block;
+                width: calc((100vw - 40px)/5 - 10px);
+                height: calc((100vw - 40px)/5 - 10px);
+                border-radius: 7px;
+                .v-image{
+                  position: absolute;
+                  top: 50%;
+                  left: 50%;
+                  transform:translate(-50%,-50%);
+                }
+              }
+            }
+            .v-list-item__title{
+              display: block;
+            }
+          }
+          .v-list-item:first-child{
+            .v-image{
+              width: 40% !important;
+              height: 40% !important;
+            }
+          }
+        }
+      }
+      }
+      .price{
+        .v-slide-group__content{
+          padding-left: 10px;
+          .v-chip:not(.v-chip--active){
+            background: #fff;
+            border: 1px solid #ddd;
+          }
+          .v-chip--active{
+            border: 1px solid #ffebe5;
+          }
+        }
+      }
+    }
+    //하단 검색/발송안내 탭
+    .search-dialog-footer{
+      .tab-footer{
+        background-color: #fafafa;
+        border-radius: 0 !important;
+        .v-card__title{
+          display: block;
+          padding: 10px;
+          font-size: 13px;
+          color:#FD7B54;
+        }
+      }
+    }
+  }
+}
+
+.modal-bottom{
+  position: fixed !important;
+  margin:0 !important;
+  bottom: 0 !important;
+  border-radius: 30px 30px 0 0 !important;
+  background-color: #fff;
+}
+.modal-category{
+  .v-list.grid-1{
+    .v-list-item {
+      .v-list-item__title{
+        font-size: 15px !important;
+      }
+    }
+  }
+
+}
+
+.modal-brand{
+  .v-data-iterator{
+    background-color: #fff;
+
+    header + div:not(.v-list){
+      text-align: center;
+      color: #747474;
+      line-height: 250px;
+    }
+
+    .v-list{
+      max-height: 245px;
+      margin-top:5px !important;
+      overflow-x: hidden;
+      overflow-y: scroll;
+      .v-list-item-group{
+        display: flex;
+        flex-wrap: wrap;
+      .v-list-item{
+        flex:initial;
+        margin:0px;
+        padding:0 5px;
+        width: calc((100vw - 24px)/5);
+        float: left;
+          .v-list-item__title{
+            font-size: 13px;
+          }
+          .img{
+            width:calc((100vw - 24px) /5 - 10px);
+            height:calc((100vw - 24px)/5 - 10px);
+            display: block;
+            border-radius: 7px;
+          }
+        }
+      }
+    }
+  }
+}
+.modal-best{
+  .v-input--radio-group{
+    .v-radio{
+      padding:5px 0;
+    }
+  }
+}
+
+// 서치 dialog 브랜드 탭
+@media (min-width :600px){
+  .brand{
+    .v-list{
+      .v-list-item{
+        width: calc((100vw - 40px)/6) !important;
+        .img{
+          display: block;
+          width: calc((100vw - 40px)/6 - 10px) !important;
+          height: calc((100vw - 40px)/6 - 10px) !important;
+        }
+      }
+    }
+  }
+}
+@media (min-width :720px){
+  .brand{
+    .v-list{
+      width: 100%;
+      .v-list-item-group{
+        width: 100%;
+      .v-list-item{
+        width: calc(100%/8) !important;
+        .img{
+          display: block;
+          height: 76.25px !important;
+        }
+      }
+    }
+    }
+  }
+}
+
+// 검색결과 모달 브랜드팝업
+@media (min-width :600px){
+.modal-brand{
+  .v-list{
+    .v-list-item{
+      width: calc((100vw - 24px)/6) !important;
+      .img{
+        display: block;
+        width:calc((100vw - 24px) /6 - 10px) !important;
+        height:calc((100vw - 24px)/6 - 10px) !important;
+      }
+    }
+  }
+}
+}
+@media (min-width :720px){
+.modal-brand{
+  .v-list{
+    width: 100% !important;
+    .v-list-item{
+      width: calc(100%/8) !important;
+      .img{
+        display: block;
+        width: 78.25px !important;
+        height: 78.25px !important;
+      }
+    }
+  }
+}
+}

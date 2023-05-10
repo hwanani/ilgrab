@@ -1,0 +1,30 @@
+.info-txt-wrap{
+  li{list-style: none; color:#747474; font-size:12px; margin-top:3px;}
+}
+.signup-form{
+  .v-card__title{
+     border-bottom: 1px solid #ddd;
+  }
+}
+.v-card__title.bd-b{
+  border-bottom: 1px solid #ddd;
+}
+
+.call-center{
+  .v-chip{border-radius: 5px !important;}
+  span{color:#727272;}
+}
+
+.c-grey{color: #9BA2A9 !important;}
+.c-dgrey{color: #565A5D;}
+
+.info-box{
+  padding: 7px 10px 10px;
+  background: #f5f6f8;
+  border-radius: 7px;
+  p{font-size: 13px;font-weight: 600; padding: 7px 0; margin-bottom: 7px !important; border-bottom:1px solid #ddd;}
+  ul{
+    padding: 0 !important;
+    li{list-style: none; margin-bottom: 4px; font-size: 13px; color:#747474;}
+  }
+}

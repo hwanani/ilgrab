@@ -6,7 +6,7 @@ const DefaultComponent = Vue.component('TempView', {
 	template: '<div></div>',
 });
 
-const createComponentIndex =  (...childs) =>{
+const createComponentIndex =  (...childs) => {
 	return Vue.component('Index', {
 		data: function () {
 			return {
@@ -33,55 +33,45 @@ const createComponentIndex =  (...childs) =>{
 		},
 		template: 
 		`<VApp>
-			<CustomAppbar :root="root" @left="clickLeft" @center="clickCenter" @right="clickRight"/>
-			<CustomView :viewClass="viewClass" :root="root"/>
-			<CustomFooter :root="root"/>
-			<BottomNavi/>
+			<CustomAppbar />
+			<CustomView />
+			<CustomFooter />
 		</VApp>`,
 		components: {
 			VApp,
 			CustomAppbar: childs[0] ?? DefaultComponent,
 			CustomView: childs[1] ?? DefaultComponent,
 			CustomFooter: childs[2] ?? DefaultComponent,
-			BottomNavi: childs[3] ?? DefaultComponent,
-			AlertDialog,
-			CnfmDialog
 		},
 			
 		mounted() {
 		},
 		props: {},
 		methods: {
-			// 버튼 클릭 이벤트 핸들러에서 $emit을 호출해서 attack 이벤트 실행하기
-			clickLeft() {
-			},
-			clickCenter() {
-			},
-			clickRight() {
-			},
 		},
 	});
 }
 
-const createComponentView = () =>{
-	return Vue.component('SubView', {
-		props: {},
-		data: function () {
-			return {};
-		},
-		mixin: [''],
-		computed: {},
-		mounted() {},
-		methods: {},
-		components: {
-			//VApp,
-		},
-		template: 
-		`<div>
-			<router-view/>
-		</div>`,
-	});
-}
+
+// const createComponentView = () =>{
+// 	return Vue.component('SubView', {
+// 		props: {},
+// 		data: function () {
+// 			return {};
+// 		},
+// 		mixin: [''],
+// 		computed: {},
+// 		mounted() {},
+// 		methods: {},
+// 		components: {
+// 			//VApp,
+// 		},
+// 		template: 
+// 		`<div>
+// 			<router-view/>
+// 		</div>`,
+// 	});
+// }
 
 export {
 	createComponentIndex,
